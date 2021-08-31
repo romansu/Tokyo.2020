@@ -16,7 +16,7 @@ altura(x, altura, sexo, s = NULL)
 \item{s}{Indicacion sobre el sexo de la persona que se desea filtrar.}
 }
 \value{
-La o las persona de mayor altura del dataframe proporcionado.
+La o las persona de mayor altura del DataFrame proporcionado.
 }
 \description{
 Devuelve la persona con mayor altura. Ademas es posible filtrar por el sexo de

@@ -7,8 +7,9 @@
 #' @param sexo La variable que contiene el sexo de cada persona.
 #' @param s Indicacion sobre el sexo de la persona que se desea filtrar.
 #'
-#' @return La o las persona de mayor altura del dataframe proporcionado.
+#' @return La o las persona de mayor altura del DataFrame proporcionado.
 #' @import dplyr
+#' assertthat
 #'
 #' @examples
 #' nombre <- c("Juan", "Maria", "Ana","Pablo")
@@ -17,6 +18,7 @@
 #' atletas <- data.frame(nombre, estatura, sexo)
 
 altura <- function(x, altura, sexo, s = NULL) {
+  assertthat::assert_that(is.data.frame(x), msg = ("x tiene que ser un DataFrame para que funcione"))
   if (!is.null(s)) {
     x=x[x[[sexo]]==s,]
   }
